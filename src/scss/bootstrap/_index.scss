@@ -1,0 +1,24 @@
+//Colores
+$primary: #05738f;
+$secondary: #7C3AED;
+$custom-colors: (
+  "tertiary": #DB2777,
+  "quaternary": #322997,
+  "fifth": #168300
+);
+
+//Tipografia
+$font-size-base: 1rem;
+$custom-fs: (
+  7: $font-size-base * 4.5
+);
+
+//Mapeo de arreglos
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$font-sizes: map-merge($font-sizes, $custom-fs);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
